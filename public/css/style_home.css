@@ -1,0 +1,258 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.sub-head{
+    font-size:1rem;
+    padding: 2%;
+    font-style: italic;
+}
+
+.nav-menu{
+    float: right;
+}
+
+nav{
+    text-shadow: 2px 2px 4px #000000;
+    height:auto;
+    width: auto;
+    background-image: linear-gradient( rgba(0,0,0,.7), rgba(0,0,0,.7) ) , url("../images/2.jpg");
+    padding: 3%;
+    text-align: center;
+    letter-spacing: 2px;
+    font-family: 'Playfair Display', serif;
+    color: rgb(254, 252, 255);
+}
+
+.head{
+    font-size: 2rem;
+}
+
+section{
+    padding: 5rem 0;
+    background-color: #fff;  
+    overflow: hidden;
+}
+
+a{
+    text-decoration: none;
+}
+
+.heading{
+    text-transform: uppercase;
+    font-size: 2rem;
+    letter-spacing: 3px;
+    margin-right: -3px;
+    margin-bottom: 5rem;
+    text-align: center;
+    position: relative;
+}
+
+.heading::after{
+    content: "";
+    width: 10rem;
+    height: .8rem;
+    background-color: greenyellow;
+    position: absolute;
+    bottom: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2rem;
+}
+
+.card-wrapper{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.card{
+    width: 18rem;
+    background-color: #ebeef8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin:2rem 0;
+    box-shadow: .5rem .5rem 3rem rgba(0,0,0,0.2);
+}
+
+.card .card-img{
+    width: 100%;
+    height: 18rem;
+    object-fit: cover;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 68%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 68%, 0% 100%);
+}
+
+.logo-image{
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: -8rem;
+    z-index: 999;
+    border: 0.5rem solid #ebeef8;
+}
+
+.card h1{
+    font-size: 1.5rem;
+    letter-spacing: 1.5px;
+    margin: 1.5rem 0 ;
+}
+
+.about{
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    text-align: center;
+}
+
+.card .btn{
+    padding: 1rem;
+    background-color: #445ae3;
+    border-radius: 2rem;
+    margin: 1rem 0;
+    text-transform: uppercase;
+    color:#eee;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+.card .btn:hover{
+    transform:translateY(-2px);
+    box-shadow: .5rem .5rem 3rem rgba(0,0,0,0.4);
+}
+
+@media screen and (min-width:700px){
+    .card-wrapper{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card{
+        margin: 2rem;
+    }
+
+    @keyframes fadeIn {
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+    }
+    .card:nth-child(1){
+        animation: fadeIn .5s .5s backwards;
+    }
+    .card:nth-child(2){
+        animation: fadeIn .5s 1s backwards;
+    }
+    .card:nth-child(3){
+        animation: fadeIn .5s 1.5s backwards;
+    }
+    .card:hover{
+        transform: scale(1.1);
+    }
+}
+
+.card-1-head{
+    text-align: center;
+    padding: 3rem;
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+.content{
+    padding: 2%;
+    text-align: center;
+    margin-top: 50px;
+}
+.cards-1{
+    font-size: 1.3rem;
+    background: #f9f9f9;
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 2rem;
+    overflow: auto;
+}
+
+.card-1{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 2rem;
+    margin-bottom: 2rem;
+    object-fit: cover;
+}
+
+.card-1-img{
+    width: 450px;
+    height: 250px;
+    padding: 3%;
+}
+
+#img-2{
+    order: 2;
+}
+
+@media screen and (max-width:810px){
+    .cards-1{
+        width: auto;
+        overflow: hidden;
+    }
+    .card-1{
+        margin: auto;
+        display: flex;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        flex-direction: column;
+    }
+    .content{
+        padding: 2%;
+        margin-bottom: 6%;
+    }
+
+    #img-2{
+        order: initial;
+    }
+}
+
+footer{
+    background-color: rgb(74, 78, 78);
+    color: white;
+}
+
+.foot-card{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    text-decoration: none;
+    padding: 3%;
+    font-size: .9rem;
+    text-align: justify;
+}
+
+#link { color: rgb(209, 209, 209); }
+
+.foot-head{
+    border-style:solid;
+    border-color:  rgb(74, 78, 78);
+    border-left: 2px solid #ebeef8;
+    margin-bottom:2%; 
+}
+
+.quick{
+    padding-left: 20%;
+}
+
+h5{
+    padding: 3%;
+    text-align: center;
+}

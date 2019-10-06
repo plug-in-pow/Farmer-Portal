@@ -1,0 +1,95 @@
+{{!-- 
+<button id='btn' onclick="stt()">load</button>
+State
+<select id='list_state' onchange="req_st()">
+    <option value="select state"></option>
+</select>
+
+City
+<select id='list_city'onchange="req_ct()">
+    <option value="select city"></option>
+</select>
+ --}}
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<ul class="nav-list">
+    <li class="nav-item logo">
+        <h3 class="logo-head">
+            <i class="fas fa-tractor" style="color: rgb(192, 240, 164)"></i>
+            &nbsp;&nbsp;Framer Portal
+        </h3>
+    </li>
+    <li class="nav-item">
+        <a href="home.html"><i class="fas fa-home" aria-hidden="true">
+                &nbsp;&nbsp;Home</i>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a href="weather.html"><i class="fas fa-cloud-sun-rain" aria-hidden="true">
+                &nbsp;&nbsp;Weather</i>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a href="crop.html"><i class="fa fa-leaf" aria-hidden="true">
+                &nbsp;&nbsp;Crop-Price</i>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="active" href="air.html">
+            <i class="fas fa-wind" aria-hidden="true">&nbsp;&nbsp;Air-Quality</i>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a href="about.html">
+            <i class="fas fa-id-badge" aria-hidden="true">&nbsp;&nbsp;About Us</i>
+        </a>
+    </li>
+    <li class="nav-item-icon">
+        <div class="icon-bar">
+            <a href="home.html"><i class="fas fa-home fa-xs" aria-hidden="true"></i></i></a>
+            <a href="weather.html"><i class="fas fa-cloud-sun-rain fa-xs" aria-hidden="true"></i></a>
+            <a href="crop.html"><i class="fa fa-leaf fa-xs" aria-hidden="true"></i></a>
+            <a class="active" href="air.html"><i class="fas fa-wind fa-xs" aria-hidden="true"></i></a>
+            <a href="about.html"><i class="fas fa-id-badge fa-xs" aria-hidden="true"></i></a>
+        </div>
+    </li>
+</ul>
+<div class="header">
+    <i class="fas fa-tractor" style="color: rgb(192, 240, 164)"></i>
+    &nbsp;&nbsp;<b>FARMER PORTAL</b>
+</div>
+<div class="main-body">
+
+    <h2 class="main-head">Air-Quality</h2>
+    You can check air quality here !!!!
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form>
+                Select State :
+                <select id='list_state'>
+                    <option value="default"></option>
+                </select>
+                Select city :
+                <select id='list_city' >
+                    <option></option>
+                </select>
+                Select station :
+                <select id='list_station'>
+                    <option></option>
+                </select>
+            </form>
+            <button type="submit" id="submit">Submit</button>
+        </div>
+    </div>
+
+    <br>
+    <button type="button" class="btn btn-info" id="myBtn" >
+        Query
+    </button>
+
+    <canvas id="myChart"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
